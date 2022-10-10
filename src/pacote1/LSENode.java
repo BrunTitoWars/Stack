@@ -1,23 +1,33 @@
+package pacote1;
+
 public class LSENode<T> {
 
     private T info;
-    private LSENode<T> topo;
+    private LSENode<T> prox;
+
+    public LSENode(T valor) {
+
+        this.info = valor;
+    }
 
     public T getInfo() {
         
         return info;
     }
+
     public void setInfo(T info) {
 
         this.info = info;
     }
-    public LSENode<T> getTopo() {
 
-        return topo;
+    public LSENode<T> getProx() {
+
+        return prox;
     }
-    public void setTopo(LSENode<T> topo) {
 
-        this.topo = topo;
+    public void setProx(LSENode<T> novoProx) {
+
+        this.prox = novoProx;
     }
     
 }

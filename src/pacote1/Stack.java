@@ -15,9 +15,9 @@ public class Stack<T> {
         }
     }
 
-    public void push(T valor){
+    public void push(T valor){ // Empilhar
 
-        LSENode<T> novo = new LSENode(valor);
+        LSENode<T> novo = new LSENode<T>(valor);
         novo.setProx(this.topo);
         this.topo = novo;
     }
@@ -27,14 +27,14 @@ public class Stack<T> {
         return false;
     }
 
-    public T pop(){
+    public T pop(){ // Desempilhar
 
         LSENode<T> aux = this.topo;
         this.topo = this.topo.getProx();
         return aux.getInfo();
     }
 
-    public T top(){
+    public T top(){ // O que está no Topo
 
         return this.topo.getInfo();
     }
